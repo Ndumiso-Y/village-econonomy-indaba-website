@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/village-econonomy-indaba-website/static/css/main.54a3760d.css",
-    "main.js": "/village-econonomy-indaba-website/static/js/main.f04b9dca.js",
+    "main.js": "/village-econonomy-indaba-website/static/js/main.bcf0109a.js",
     "static/media/61.jpg": "/village-econonomy-indaba-website/static/media/61.fa31a933a0988c71ae8b.jpg",
     "static/media/Logo Reveal.mp4": "/village-econonomy-indaba-website/static/media/Logo Reveal.ea0ca8b01f2d7c696859.mp4",
     "static/media/dr-koketso.jpg": "/village-econonomy-indaba-website/static/media/dr-koketso.2d0c35bf8e93235b7656.jpg",
@@ -16,10 +16,10 @@
     "static/media/HakemLogo.png": "/village-econonomy-indaba-website/static/media/HakemLogo.a06f76069d7c76e2c7db.png",
     "index.html": "/village-econonomy-indaba-website/index.html",
     "main.54a3760d.css.map": "/village-econonomy-indaba-website/static/css/main.54a3760d.css.map",
-    "main.f04b9dca.js.map": "/village-econonomy-indaba-website/static/js/main.f04b9dca.js.map"
+    "main.bcf0109a.js.map": "/village-econonomy-indaba-website/static/js/main.bcf0109a.js.map"
   },
   "entrypoints": [
     "static/css/main.54a3760d.css",
-    "static/js/main.f04b9dca.js"
+    "static/js/main.bcf0109a.js"
   ]
 }
