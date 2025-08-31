@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/village-econonomy-indaba-website/static/css/main.54a3760d.css",
+    "main.js": "/village-econonomy-indaba-website/static/js/main.f04b9dca.js",
+    "static/media/61.jpg": "/village-econonomy-indaba-website/static/media/61.fa31a933a0988c71ae8b.jpg",
+    "static/media/Logo Reveal.mp4": "/village-econonomy-indaba-website/static/media/Logo Reveal.ea0ca8b01f2d7c696859.mp4",
+    "static/media/dr-koketso.jpg": "/village-econonomy-indaba-website/static/media/dr-koketso.2d0c35bf8e93235b7656.jpg",
+    "static/media/capetown.png": "/village-econonomy-indaba-website/static/media/capetown.ab53051fe69a83da3972.png",
+    "static/media/Bhaphalane.jpg": "/village-econonomy-indaba-website/static/media/Bhaphalane.cee6e4de34ad2c6f1754.jpg",
+    "static/media/Dr.png": "/village-econonomy-indaba-website/static/media/Dr.d9a52a20749a6bd4730c.png",
+    "static/media/Hfoundation.png": "/village-econonomy-indaba-website/static/media/Hfoundation.e423f48cd7e1c1e1d410.png",
+    "static/media/pic2.jpg": "/village-econonomy-indaba-website/static/media/pic2.c753c2d9d485315f36dd.jpg",
+    "static/media/Limpopo.jpg": "/village-econonomy-indaba-website/static/media/Limpopo.12f270aba46d2e7123bf.jpg",
+    "static/media/1.jpg": "/village-econonomy-indaba-website/static/media/1.10f09efad45754cb53f1.jpg",
+    "static/media/logo.png": "/village-econonomy-indaba-website/static/media/logo.4322320d889bc0f58cbf.png",
+    "static/media/HakemLogo.png": "/village-econonomy-indaba-website/static/media/HakemLogo.a06f76069d7c76e2c7db.png",
+    "index.html": "/village-econonomy-indaba-website/index.html",
+    "main.54a3760d.css.map": "/village-econonomy-indaba-website/static/css/main.54a3760d.css.map",
+    "main.f04b9dca.js.map": "/village-econonomy-indaba-website/static/js/main.f04b9dca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.54a3760d.css",
+    "static/js/main.f04b9dca.js"
+  ]
+}
