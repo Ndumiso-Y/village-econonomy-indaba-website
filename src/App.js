@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Foreword from "./pages/Foreword";
+import SectorsPage from "./pages/SectorsPage";
+import Framework from "./pages/Framework";
+import Associations from "./pages/Associations";
+import Gallery from "./pages/Gallery";
+
+// Event galleries
+import Event1 from "./pages/gallery/Event1";
+import Event2 from "./pages/gallery/Event2";
+import Event3 from "./pages/gallery/Event3";
+import Event4 from "./pages/gallery/Event4";
+import Event5 from "./pages/gallery/Event5";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/foreword" element={<Foreword />} />
+            <Route path="/sectors" element={<SectorsPage />} />
+            <Route path="/framework" element={<Framework />} />
+            <Route path="/associations" element={<Associations />} />
+            <Route path="/gallery" element={<Gallery />} />
+
+            {/* Event Carousel Routes */}
+            <Route path="/gallery/event1" element={<Event1 />} />
+            <Route path="/gallery/event2" element={<Event2 />} />
+            <Route path="/gallery/event3" element={<Event3 />} />
+            <Route path="/gallery/event4" element={<Event4 />} />
+            <Route path="/gallery/event5" element={<Event5 />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
