@@ -1,5 +1,5 @@
 import React from "react";
-import drKoketsoImg from "../assets/dr-koketso.jpg"; // <-- Replace with actual filename
+import drKoketsoImg from "../assets/optimized/dr-koketso.jpg"; // <-- Replace with actual filename
 
 const Foreword = () => {
   return (

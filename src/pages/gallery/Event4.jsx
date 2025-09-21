@@ -1,6 +1,6 @@
 import React from "react";
 import GalleryCarousel from "../../components/GalleryCarousel";
-import img1 from "../../assets/Bhaphalane.jpg";
+import img1 from "../../assets/optimized/Bhaphalane.jpg";
 
 const Event4 = () => {
   const images = [img1];

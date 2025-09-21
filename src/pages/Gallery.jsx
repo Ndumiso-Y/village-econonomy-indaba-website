@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import event1 from "../assets/61.jpg";
-import event2 from "../assets/Limpopo.jpg";
-import event3 from "../assets/capetown.png";
-import event4 from "../assets/Bhaphalane.jpg";
-import event5 from "../assets/pic2.jpg";
+import event1 from "../assets/optimized/61.jpg";
+import event2 from "../assets/optimized/Limpopo.jpg";
+import event3 from "../assets/optimized/capetown.png";
+import event4 from "../assets/optimized/Bhaphalane.jpg";
+import event5 from "../assets/optimized/pic2.jpg";
 
 const events = [
   { title: "Inauguration — 1 Nov 2024", image: event1, link: "/gallery/event1" },

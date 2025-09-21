@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import heroImage from "../assets/1.jpg";
+import LazyImage from "../components/LazyImage";
+import heroImage from "../assets/optimized/1.jpg";
 import introVideo from "../assets/Logo Reveal.mp4";
 
 import {
@@ -10,16 +11,16 @@ import {
 import { FaSeedling } from "react-icons/fa";
 
 // Event thumbs
-import event1 from "../assets/61.jpg";
-import event2 from "../assets/Limpopo.jpg";
-import event3 from "../assets/capetown.png";
-import event4 from "../assets/Bhaphalane.jpg";
-import event5 from "../assets/pic2.jpg";
+import event1 from "../assets/optimized/61.jpg";
+import event2 from "../assets/optimized/Limpopo.jpg";
+import event3 from "../assets/optimized/capetown.png";
+import event4 from "../assets/optimized/Bhaphalane.jpg";
+import event5 from "../assets/optimized/pic2.jpg";
 
 // Associations logos
-import DrLogo from "../assets/Dr.png";
-import HakemLogo from "../assets/HakemLogo.png";
-import HfoundationLogo from "../assets/Hfoundation.png";
+import DrLogo from "../assets/optimized/Dr.png";
+import HakemLogo from "../assets/optimized/HakemLogo.png";
+import HfoundationLogo from "../assets/optimized/Hfoundation.png";
 
 const sectors = [
   { title: "Local Governance", desc: "Empower local leadership", icon: <HiUserGroup className="text-green-700 text-4xl mb-2 mx-auto" /> },
@@ -127,7 +128,12 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
             {events.map((e, i) => (
               <Link to={e.link} key={i} className="group block">
-                <img src={e.img} alt={e.caption} className="rounded-lg shadow-md w-full h-64 object-cover group-hover:opacity-90" />
+                <LazyImage
+                  src={e.img}
+                  alt={e.caption}
+                  className="rounded-lg shadow-md w-full h-64 object-cover group-hover:opacity-90"
+                  placeholder={<div className="rounded-lg shadow-md w-full h-64 bg-gray-200 animate-pulse flex items-center justify-center"><span className="text-gray-400">Loading...</span></div>}
+                />
                 <p className="mt-2 text-sm font-medium text-gray-700">{e.caption}</p>
               </Link>
             ))}
@@ -155,13 +161,13 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-center text-green-700 mb-8">Associations</h2>
           <div className="flex flex-wrap justify-center items-center gap-10">
             <div className="w-40 h-24 flex items-center justify-center bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition hover:-translate-y-1">
-              <img src={DrLogo} alt="Dr. Koketso Rakhudu Foundation" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition" />
+              <LazyImage src={DrLogo} alt="Dr. Koketso Rakhudu Foundation" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition" />
             </div>
             <div className="w-40 h-24 flex items-center justify-center bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition hover:-translate-y-1">
-              <img src={HakemLogo} alt="Hakem Logo" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition" />
+              <LazyImage src={HakemLogo} alt="Hakem Logo" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition" />
             </div>
             <div className="w-40 h-24 flex items-center justify-center bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition hover:-translate-y-1">
-              <img src={HfoundationLogo} alt="Hakem Foundation" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition" />
+              <LazyImage src={HfoundationLogo} alt="Hakem Foundation" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition" />
             </div>
           </div>
         </div>

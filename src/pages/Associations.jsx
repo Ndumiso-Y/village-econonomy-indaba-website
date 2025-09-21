@@ -1,7 +1,7 @@
 import React from "react";
-import DrLogo from "../assets/Dr.png";
-import HakemLogo from "../assets/HakemLogo.png";
-import HfoundationLogo from "../assets/Hfoundation.png";
+import DrLogo from "../assets/optimized/Dr.png";
+import HakemLogo from "../assets/optimized/HakemLogo.png";
+import HfoundationLogo from "../assets/optimized/Hfoundation.png";
 
 const Associations = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import GalleryCarousel from "../../components/GalleryCarousel";
-import img1 from "../../assets/capetown.png";
+import img1 from "../../assets/optimized/capetown.png";
 
 const Event3 = () => {
   const images = [img1];

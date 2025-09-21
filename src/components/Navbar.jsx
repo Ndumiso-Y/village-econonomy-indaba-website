@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
-import logo from "../assets/logo.png"; // Adjust if your logo path differs
+import logo from "../assets/optimized/logo.png"; // Adjust if your logo path differs
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
