@@ -146,6 +146,7 @@ const Home = () => {
                 <LazyImage
                   src={e.img}
                   alt={e.caption}
+                  eager={i < 3} // Load first 3 images immediately
                   className="rounded-lg shadow-md w-full h-64 object-cover group-hover:opacity-90"
                   placeholder={<div className="rounded-lg shadow-md w-full h-64 bg-gray-200 animate-pulse flex items-center justify-center"><span className="text-gray-400">Loading...</span></div>}
                 />
@@ -181,8 +182,8 @@ const Home = () => {
             <div className="w-40 h-24 flex items-center justify-center bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition hover:-translate-y-1">
               <LazyImage src={HakemLogo} alt="Hakem Logo" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition" />
             </div>
-            <div className="w-40 h-24 flex items-center justify-center bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition hover:-translate-y-1">
-              <LazyImage src={HfoundationLogo} alt="Hakem Foundation" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition" />
+            <div className="w-40 h-24 flex items-center justify-center bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition hover:-translate-y-1 overflow-hidden">
+              <img src={HfoundationLogo} alt="Hakem Foundation" className="max-h-16 max-w-32 object-contain filter grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition" />
             </div>
           </div>
         </div>

@@ -16,10 +16,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Left: Nav links */}
         <div className="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
-          <Link to="/" className="hover:text-yellow-400">Home</Link>
-          <Link to="/about" className="hover:text-yellow-400">About</Link>
-          <Link to="/sectors" className="hover:text-yellow-400">Sectors</Link>
-          <Link to="/gallery" className="hover:text-yellow-400">Gallery</Link>
+          <Link to="/" onClick={scrollToTop} className="hover:text-yellow-400">Home</Link>
+          <Link to="/about" onClick={scrollToTop} className="hover:text-yellow-400">About</Link>
+          <Link to="/sectors" onClick={scrollToTop} className="hover:text-yellow-400">Sectors</Link>
+          <Link to="/gallery" onClick={scrollToTop} className="hover:text-yellow-400">Gallery</Link>
         </div>
 
         {/* Middle: Social icons */}

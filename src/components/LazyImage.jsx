@@ -6,10 +6,11 @@ const LazyImage = ({
   alt,
   className = '',
   placeholder = null,
+  eager = false, // Load immediately without intersection observer
   ...props
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(eager); // Start as true if eager loading
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef();
 
@@ -17,6 +18,12 @@ const LazyImage = ({
   const imageSrc = optimizedSrc || src;
 
   useEffect(() => {
+    // Skip intersection observer if eager loading
+    if (eager) {
+      setIsInView(true);
+      return;
+    }
+
     // Fallback for browsers without IntersectionObserver support
     if (!window.IntersectionObserver) {
       setIsInView(true);
@@ -38,7 +45,7 @@ const LazyImage = ({
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [eager]);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -58,7 +65,7 @@ const LazyImage = ({
 
   return (
     <>
-      <div ref={imgRef} className={`${className}`}>
+      <div ref={imgRef} className={`${className} relative overflow-hidden`}>
         {/* Show placeholder until image loads */}
         {!isLoaded && (placeholder || defaultPlaceholder)}
 
