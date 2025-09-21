@@ -45,15 +45,30 @@ const events = [
 
 const Home = () => {
   const [showVideo, setShowVideo] = useState(() => {
-    const seen = sessionStorage.getItem("hasSeenIntro");
-    return !seen;
+    try {
+      // Check if sessionStorage is available (some mobile browsers block it)
+      if (typeof Storage !== "undefined" && sessionStorage) {
+        const seen = sessionStorage.getItem("hasSeenIntro");
+        return !seen;
+      }
+    } catch (error) {
+      console.warn("SessionStorage not available:", error);
+    }
+    // Default to not showing video if sessionStorage fails
+    return false;
   });
 
   useEffect(() => {
     if (showVideo) {
       const timer = setTimeout(() => {
         setShowVideo(false);
-        sessionStorage.setItem("hasSeenIntro", "true");
+        try {
+          if (typeof Storage !== "undefined" && sessionStorage) {
+            sessionStorage.setItem("hasSeenIntro", "true");
+          }
+        } catch (error) {
+          console.warn("Cannot save to sessionStorage:", error);
+        }
       }, 6000); // 6 seconds
       return () => clearTimeout(timer);
     }

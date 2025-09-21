@@ -17,6 +17,12 @@ const LazyImage = ({
   const imageSrc = optimizedSrc || src;
 
   useEffect(() => {
+    // Fallback for browsers without IntersectionObserver support
+    if (!window.IntersectionObserver) {
+      setIsInView(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

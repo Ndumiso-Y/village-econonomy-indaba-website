@@ -1,6 +1,7 @@
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
+import ErrorBoundary from "./components/ErrorBoundary";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -21,7 +22,8 @@ import Event5 from "./pages/gallery/Event5";
 
 function App() {
   return (
-    <Router>
+    <ErrorBoundary>
+      <Router>
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
@@ -44,7 +46,8 @@ function App() {
         </main>
         <Footer />
       </div>
-    </Router>
+      </Router>
+    </ErrorBoundary>
   );
 }
 
